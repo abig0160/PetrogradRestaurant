@@ -1,5 +1,5 @@
 // fetch data
-fetch("https://kea-alt-del.dk/t5/api/productlist")
+/*fetch("https://kea-alt-del.dk/t5/api/productlist")
     .then(function (response) {
         console.log(response)
         return response.json();
@@ -13,9 +13,9 @@ function dataReceived(products) {
     //loop through products
     products.forEach(showProduct)
 }
-
+*/
 //executed once for each product
-function showProduct(myProduct) {
+function showProduct3(myProduct) {
     console.log(myProduct.discount);
     //finding the template
     const temp = document.querySelector("#productTemplate").content;
@@ -63,7 +63,7 @@ init();
 function categoriesReceived(cats) {
     createNavigation(cats);
     createSections(cats);
-
+ fetchProducts();
 }
 
 function createSections(categories) {
