@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Restaurant Petrograd</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header id="header">
+        <nav>
+            <a href="#">Petrograd</a>
+
+            <a href="#starter">Starter</a>
+            <a href="#main">Main</a>
+        </nav>
+    </header>
+    <details>
+        <summary>Filters
+            <button id="veggiefilter"> vegetarian</button>
+        <button id="non
+Allergens"> nonallergens</button>
+        <button id="nonAlcholic"> non alcoholic</button></summary>
+
+    </details>
+
+    <!-- Page Content -->
+
+    <main class="productlist">
+        <section id="starter">
+            <template id="productTemplate">
+                <article class="product">
+                    <h4 class="soldout"></h4>
+                    <img src="https://kea-alt-del.dk/t5/site/imgs/small/rodbede-cabanossi-sm.jpg" alt="" />
+                    <section class="productbody">
+                        <div class="align">
+                            <h3 class="data_name">Dish Name</h3>
+                            <img src="veggieIcon.png" class="vegetarian hidden">
+                        </div>
+                        <div class="align2">
+                            <h4 class="data_price"></h4>
+                            <h4 class="data-discount">DISC</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptatum, velit inventore. Architecto nihil quis temporibus aut.
+                        </p>
+
+
+                        <button>See details</button>
+                    </section>
+                </article>
+            </template>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; </p>
+    </footer>
+
+    <script src="js/petrograd.js"></script>
+</body></html>
