@@ -15,40 +15,6 @@ function dataReceived(products) {
 }
 */
 //executed once for each product
-function showProduct3(myProduct) {
-    console.log(myProduct.discount);
-    //finding the template
-    const temp = document.querySelector("#productTemplate").content;
-    //clone the template
-    const myCopy = temp.cloneNode(true);
-
-    //show discounted prices
-    if (!myProduct.discount) {
-        myCopy.querySelector(".data-discount").classList.add("hidden");
-    }
-
-
-    //show vegetarian dishes
-    if (myProduct.vegetarian) {
-        myCopy.querySelector(".vegetarian").classList.remove("hidden");
-    }
-    //show sold out products
-    if (myProduct.soldout == true) {
-        myCopy.querySelector(".soldout").textContent = "Sold out";
-    } else {
-        myCopy.querySelector(".soldout").classList.add("hidden");
-    }
-    //fill out the template
-    myCopy.querySelector(".data_name").textContent = myProduct.name;
-    myCopy.querySelector(".data_price").textContent = myProduct.price;
-    myCopy.querySelector("span").textContent = "hola";
-    //append
-    const parentElem = document.querySelector("section#starter");
-    parentElem.appendChild(myCopy)
-}
-
-
-
 
 //categories
 function init() {
@@ -112,19 +78,37 @@ function showProduct(myProduct) {
     const temp = document.querySelector("#productTemplate").content;
     //clone the template
     const myCopy = temp.cloneNode(true);
-
+    //show images
     const img = myCopy.querySelector("img");
     img.setAttribute("src", `https://kea-alt-del.dk/t5/site/imgs/medium/${myProduct.image}-md.jpg`);
+        //show discounted prices
     if (!myProduct.discount) {
-        //console.log("NOT DISCOUNT")
         myCopy.querySelector(".data-discount").classList.add("hidden")
         //@@ -90,13 +92,28 @@ function showProduct(myProduct){
     }
+       //show vegetarian dishes
+    if (myProduct.vegetarian) {
+        myCopy.querySelector(".vegetarian").classList.remove("hidden");
+    }
+    //show alcoholic products
+        if (myProduct.alcohol) {
+        myCopy.querySelector(".alcohol").classList.remove("hidden");
+    }
+    //show laktose  products
+            if (myProduct.allergens) {
+        myCopy.querySelector(".laktose").classList.remove("hidden");
+    }
+         //show sold out products
+    if (myProduct.soldout == true) {
+        myCopy.querySelector(".soldout").textContent = "Sold out";
+    } else {
+        myCopy.querySelector(".soldout").classList.add("hidden");
+    }
+
     //fill out the template
     myCopy.querySelector(".data_name").textContent = myProduct.name;
-    console.log("I am a ", myProduct.category, "I should go to section#" + myProduct.category)
-
-
+        myCopy.querySelector(".data_price").textContent = myProduct.price;
+     myCopy.querySelector("span").textContent = myProduct.shortdescription;
 
     myCopy.querySelector("button").addEventListener("click", () => {
         fetch(`https://kea-alt-del.dk/t5/api/product?id=` + myProduct.id)
@@ -141,6 +125,7 @@ const modal = document.querySelector(".modal-background");
 function showDetails(data) {
     console.log(data)
     modal.querySelector(".modal-name").textContent = data.name;
+    modal.querySelector(".modal-price").textContent = data.price;
     modal.querySelector(".modal-description").textContent = data.longdescription;
     //  //...
     modal.classList.remove("hide");
