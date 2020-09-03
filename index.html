@@ -2,82 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <title>Restaurant Petrograd</title>
+  <title>Restaurant Petrograd</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/custom.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/custom.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Navigation -->
-    <header id="header">
-        <h1>Petrograd</h1>
-        <nav>
+  <!-- Navigation -->
+  <header id="header">
+    <h1>Petrograd</h1>
+    <nav>
 
-        </nav>
-    </header>
-    <details>
-        <summary>Filter By</summary>
-            <button id="veggiefilter"> vegetarian</button>
-            <button id="non
-Allergens"> nonallergens</button>
-            <button id="nonAlcholic"> non alcoholic</button>
+    </nav>
+  </header>
 
-    </details>
+  <details>
+    <summary>Filter By</summary>
+    <button id="veggiefilter" class="filters"> vegetarian</button>
+    <!--    <button id="nonAllergens" class="filters"> nonallergens</button>-->
+    <button id="nonAlcholic" class="filters"> non alcoholic</button>
+  </details>
 
-    <!-- Page Content -->
+  <!-- Page Content -->
 
-    <main class="productlist">
-        <section>
-            <template id="productTemplate">
-                <article class="product">
-                    <h4 class="soldout"></h4>
-                    <img src="https://kea-alt-del.dk/t5/site/imgs/small/rodbede-cabanossi-sm.jpg" alt="" />
-                    <section class="productbody">
-                        <div class="align">
-                            <h3 class="data_name">Dish Name</h3>
-                            <img class="laktose hidden"src="laktose.png" >
-                            <img src="veggieIcon.png" class="vegetarian hidden">
-                            <img src="alcoholIcon.png" class="alcohol hidden">
-
-
-                        </div>
-                        <div class="align2">
-                            <h4 class="data_price"></h4>
-                            <h4 class="data-discount">DISC</h4>
-                        </div>
-                        <p>
-                            <span></span>
-                        </p>
+  <main class="productlist">
+    <section>
+      <template id="productTemplate">
+        <article class="product">
+          <h4 class="soldout"></h4>
+          <img src="https://kea-alt-del.dk/t5/site/imgs/small/rodbede-cabanossi-sm.jpg" alt="" />
+          <section class="productbody">
+            <div class="align">
+              <h3 class="data_name">Dish Name</h3>
+              <img class="laktose hidden" src="laktose.png">
+              <img src="veggieIcon.png" class="vegetarian hidden">
+              <img src="alcoholIcon.png" class="alcohol hidden">
 
 
-                        <button>See details</button>
-                    </section>
-                </article>
-            </template>
-        </section>
-    </main>
+            </div>
+            <div class="align2">
+              <h4 class="data_price"></h4>
+              <h4 class="data-discount">DISC</h4>
+            </div>
+            <p>
+              <span></span>
+            </p>
 
-    <footer>
-        <p>Copyright &copy; </p>
-    </footer>
-    <div class="modal-background hide">
-        <div class="modal-content">
-            <h3 class="modal-name">NAME</h3>
-            <img src="" alt="" class="modal-image" />
-            <p class="modal-description">LONG DESCRIPTION</p>
-            <h4 class="modal-price">PRICE</h4>
-        </div>
+
+            <button>See details</button>
+          </section>
+        </article>
+      </template>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; </p>
+  </footer>
+  <div class="modal-background hide">
+    <div class="modal-content">
+      <h3 class="modal-name">NAME</h3>
+      <img src="" alt="" class="modal-image" />
+      <p class="modal-description">LONG DESCRIPTION</p>
+      <h4 class="modal-price">PRICE</h4>
     </div>
-    <script src="js/petrograd.js"></script>
+  </div>
+  <script src="js/petrograd.js"></script>
 </body>
 
 </html>

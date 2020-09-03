@@ -6,8 +6,8 @@
   --tertiary-light: #B8F3FF;
   --font-color-primary: #2E2F45;
   --font-color-secondary: #E3A536;
-  --font-body:'Montserrat', sans-serif;
-  --font-headers:'Domine', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-headers: 'Domine', serif;
 }
 
 * {
@@ -23,15 +23,17 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--font-color-primary);
-  background-color:var(--font-color-secondary);
-}
-main{
-            padding: 10vw;
+  background-color: var(--font-color-secondary);
 }
 
-h1{
-         letter-spacing: 3px;
+main {
+  padding: 10vw;
 }
+
+h1 {
+  letter-spacing: 3px;
+}
+
 h2,
 h3,
 h4,
@@ -46,23 +48,23 @@ footer {
 nav a,
 h2 {
   text-transform: capitalize;
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #header {
   align-items: center;
-    width: 100%;
-    text-transform: uppercase;
-    color: white;
-    text-align: center;
-    font-family: var(--font-headers);
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-family: var(--font-headers);
 }
 
 nav {
   background-color: var(--secondary-light);
   width: 100%;
   height: 50px;
-    font-family: var(--font-body);
+  font-family: var(--font-body);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,59 +146,68 @@ footer {
 footer p {
   margin-left: 60px;
 }
-.hidden{
-    display: none;
+
+.hidden {
+  display: none;
 }
-.soldout{
-    color: red;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 5px 5px;
-    position: relative;
-    text-align: center;
-    /* right: -227px; */
-    top:0px;
-    background-color: white;
-    text-transform: uppercase;
+
+.soldout {
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 5px;
+  position: relative;
+  text-align: center;
+  /* right: -227px; */
+  top: 0px;
+  background-color: white;
+  text-transform: uppercase;
 }
-.align{
-    display: flex;
-    align-content: space-between;
-    justify-content: space-between;
-    align-items: baseline;
+
+.align {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: baseline;
 }
-.align2{
-    display: flex;
-    align-content: flex-start;
-    justify-content: flex-start;
-    align-items: baseline;
+
+.align2 {
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: baseline;
 
 }
-img.vegetarian{
-    width: 30px;
-    height: 30px;
+
+img.vegetarian {
+  width: 30px;
+  height: 30px;
 }
-img.alcohol{
-    width: 30px;
-    height: 30px;
+
+img.alcohol {
+  width: 30px;
+  height: 30px;
 }
-.laktose{
-    width: 30px;
-    height: 30px;
+
+.laktose {
+  width: 30px;
+  height: 30px;
 }
+
 .data-discount {
-    padding: 8px;
-    margin-left: 10px;
-    position: relative;
-    float: left;
-    top: 0px;
-    width: 50px;
-    -webkit-border-radius: 0 4px 0 4px;
-    -moz-border-radius: 0 4px 0 4px;
-    border-radius: 0 4px 4px 0;
-    background-color: green;
-    color: white;
+  padding: 8px;
+  margin-left: 10px;
+  position: relative;
+  float: left;
+  top: 0px;
+  width: 50px;
+  -webkit-border-radius: 0 4px 0 4px;
+  -moz-border-radius: 0 4px 0 4px;
+  border-radius: 0 4px 4px 0;
+  background-color: green;
+  color: white;
 }
+
 /*THE MODAL*/
 .hide {
   display: none;
@@ -217,4 +228,15 @@ img.alcohol{
   border: 1px solid #7c1f17;
   margin: 1em;
   padding: 2em;
+}
+
+.active {
+  background: red;
+}
+
+details {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: hotpink;
 }
