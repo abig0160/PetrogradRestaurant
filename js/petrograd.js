@@ -158,8 +158,9 @@ function filterIt(e) {
     //console.log(filters[0].classList);
     if (filters[0].classList.contains('active') && !product.classList.contains('vegetarian')) {
       product.classList.add('hidden');
-      console.log("hey");
+      //console.log("hey");
     }
+
     if (filters[1].classList.contains('active') && product.classList.contains('contains-alco')) {
       product.classList.add('hidden');
     }
