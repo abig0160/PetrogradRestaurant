@@ -47,7 +47,7 @@ function createNavigation(categories) {
     categories.forEach(cat => {
         const a = document.createElement("a");
         a.textContent = cat;
-        a.setAttribute("href", '#{cat}')
+        a.setAttribute("href", `#${cat}`)
         document.querySelector("nav").appendChild(a);
     })
 
@@ -88,14 +88,14 @@ function showProduct(myProduct) {
     }
        //show vegetarian dishes
     if (myProduct.vegetarian) {
-        myCopy.querySelector(".vegetarian").classList.remove("hidden");
+       myCopy.querySelector('article').classList.add("vegetarian"); myCopy.querySelector("img.vegetarian").classList.remove("hidden");
     }
-    //show alcoholic products
+    //show non-alcoholic products
         if (myProduct.alcohol) {
-        myCopy.querySelector(".alcohol").classList.remove("hidden");
+        myCopy.querySelector("img.alcohol").classList.remove("hidden");
     }
     //show laktose  products
-            if (myProduct.allergens) {
+            if (myProduct.allergens == true) {
         myCopy.querySelector(".laktose").classList.remove("hidden");
     }
          //show sold out products
@@ -129,6 +129,7 @@ function showDetails(data) {
     modal.querySelector(".modal-description").textContent = data.longdescription;
     //  //...
     modal.classList.remove("hide");
+
 }
 
 const veggiefilter = document.querySelector("#veggiefilter");
@@ -149,7 +150,7 @@ alcoholfilter.addEventListener("click", alcoholFilterClicked);
 function alcoholFilterClicked() {
     alcoholfilter.classList.toggle("active")
     //b select all non veggie
-    const articles = document.querySelectorAll("article.alcoholic");
+    const articles = document.querySelectorAll("article.alcohol");
     //console.log(articles)
     articles.forEach(elem => {
         elem.classList.toggle("hidden")
