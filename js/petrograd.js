@@ -86,6 +86,9 @@ function showProduct(myProduct) {
         myCopy.querySelector(".data-discount").classList.add("hidden")
         //@@ -90,13 +92,28 @@ function showProduct(myProduct){
     }
+    else{
+         myCopy.querySelector(".data-discount").textContent = "-" + myProduct.discount   +  "%";
+    }
        //show vegetarian dishes
     if (myProduct.vegetarian) {
        myCopy.querySelector('article').classList.add("vegetarian"); myCopy.querySelector("img.vegetarian").classList.remove("hidden");
@@ -107,7 +110,7 @@ function showProduct(myProduct) {
 
     //fill out the template
     myCopy.querySelector(".data_name").textContent = myProduct.name;
-        myCopy.querySelector(".data_price").textContent = myProduct.price;
+        myCopy.querySelector(".data_price").textContent = myProduct.price +  ";-";
      myCopy.querySelector("span").textContent = myProduct.shortdescription;
 
     myCopy.querySelector("button").addEventListener("click", () => {
@@ -153,7 +156,7 @@ function alcoholFilterClicked() {
     const articles = document.querySelectorAll("article.alcohol");
     //console.log(articles)
     articles.forEach(elem => {
-        elem.classList.toggle("hidden")
+        elem.classList.toggle("hidden");
     })
 }
 //const modal = document.querySelector(".modal-background");
