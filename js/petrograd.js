@@ -118,7 +118,7 @@ function showProduct(myProduct) {
 
   //fill out the template
   myCopy.querySelector(".data_name").textContent = myProduct.name;
-  myCopy.querySelector(".data_price").textContent = myProduct.price + ";-";
+  myCopy.querySelector(".data_price").textContent = myProduct.price + " ;-";
   myCopy.querySelector("span").textContent = myProduct.shortdescription;
 
   myCopy.querySelector("button").addEventListener("click", () => {
@@ -136,7 +136,7 @@ const modal = document.querySelector(".modal-background");
 function showDetails(data) {
   console.log(data)
   modal.querySelector(".modal-name").textContent = data.name;
-  modal.querySelector(".modal-price").textContent = data.price;
+  modal.querySelector(".modal-price").textContent = data.price + " ;-";
   modal.querySelector(".modal-description").textContent = data.longdescription;
   //  //...
   modal.classList.remove("hide");
